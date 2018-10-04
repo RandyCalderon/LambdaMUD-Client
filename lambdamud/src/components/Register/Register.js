@@ -17,7 +17,7 @@ export default class Register extends Component {
         })
     }
 
-    handleRegister = e => {
+    handleRegister = () => {
         const requestBody = {
             ...this.state
         }
@@ -41,11 +41,11 @@ export default class Register extends Component {
                 <h1>Account Registration</h1>
                 <form>
                     <h2>Login</h2>
-                    <input name="username" placeholder="Login" onChange={this.handleChange} value={this.state.username} />
+                    <input type ="text" name="username" placeholder="Login" onChange={this.handleChange} value={this.state.username} />
                     <h2>Password</h2>
-                    <input name="password1" placeholder="Password" onChange={this.handleChange} value={this.state.password1} />
+                    <input type="password" name="password1" placeholder="Password" onChange={this.handleChange} value={this.state.password1} />
                     <h2>Re-type Password</h2>
-                    <input name="password2" placeholder="Re-type Password" onChange={this.handleChange} value={this.state.password2} />
+                    <input type="password" name="password2" placeholder="Re-type Password" onChange={this.handleChange} value={this.state.password2} />
                 </form>
                 <button onClick={this.handleRegister}>Connect</button>
             </div>
